@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.universe {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/universe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  width: 400px;
+  animation: spin 20s linear infinite;
+}
+
+
+.black-hole {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width: 360px;
+  transform: translateX(-50%);
+  animation: spin 6s linear infinite;
+}
+
+
+.astronaut {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  width: 200px;
+  animation: float 20s ease-in-out infinite;
+}
+    
+.planet {
+  position: absolute;
+  width: 120px;
+  animation: bob 4s ease-in-out infinite;
+}
+
+
+.earth {
+    width: 310px;
+    top: 150px;
+    right: 100px;
+}
+
+.jupiter {
+  width: 320px;
+  top: 70px;
+  left: 600px;
+  animation-delay: 1s;
+}
+
+.mars {
+  width: 260px;  
+  top: 720px;
+  right: 750px;
+  animation-delay: 2s;
+}
+
+.pluto {
+    width: 250px;
+  top: 390px;
+  left: 500px;
+  animation-delay: 0.5s;
+}
+
+.venus {
+    width: 210px;
+  top: 650px;
+  right: 200px;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1450px, -650px); 
+  }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
